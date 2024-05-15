@@ -1,7 +1,12 @@
+import CommunityComponent from "@/components/CommunityComponent/CommunityComponent";
 import React from "react";
 
 const Community = () => {
-  return <div>Community</div>;
+  return (
+    <>
+      <CommunityComponent />
+    </>
+  );
 };
 
 export default Community;

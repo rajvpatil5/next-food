@@ -1,7 +1,12 @@
+import MealsComponent from "@/components/MealsComponent/MealsComponent";
 import React from "react";
 
 const Meals = () => {
-  return <div>Meals</div>;
+  return (
+    <>
+      <MealsComponent />
+    </>
+  );
 };
 
 export default Meals;

@@ -1,9 +1,10 @@
+import HomeLayout from "@/components/HomeComponent/HomeLayout/HomeLayout";
+
 export default function Home() {
   return (
     <main>
-      <h1 style={{ color: 'white', textAlign: 'center' }}>
-        Time to get started!
-      </h1>
+      <HomeLayout />
     </main>
   );
 }
+
