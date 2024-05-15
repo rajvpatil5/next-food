@@ -5,17 +5,8 @@ import { getMeal } from "@/lib/meals";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import { notFound } from "next/navigation";
 
-type Meal = {
-  title: string;
-  creator_email?: string;
-  creator?: string;
-  summary?: string;
-  image: string | StaticImport;
-  instructions: string | TrustedHTML;
-};
-
 const MealDetailsPage = ({ params }: { params: any }) => {
-  const meal: Meal = getMeal(params.mealSlug);
+  const meal: any = getMeal(params.mealSlug);
 
   if (!meal) {
     notFound();

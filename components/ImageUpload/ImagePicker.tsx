@@ -6,19 +6,19 @@ import { Button, message, Upload } from "antd";
 import Image from "next/image";
 import classes from "@/components/ImageUpload/ImagePicker.module.css";
 
-const ImagePicker: React.FC = ({ label, name }) => {
-  const [pickedImage, setPickedImage] = useState();
-  const imageInput = useRef();
+const ImagePicker = ({ label, name }: { label?: any; name?: any }) => {
+  const [pickedImage, setPickedImage]: any = useState();
+  const imageInput: any = useRef();
 
   function handlePickClick() {
     imageInput.current.click();
   }
 
-  function handleImageChange(event) {
+  function handleImageChange(event: any) {
     const file = event.target.files[0];
 
     if (!file) {
-      setPickedImage(null);
+      setPickedImage(undefined);
       return;
     }
 
