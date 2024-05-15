@@ -9,7 +9,7 @@ const MealItem: React.FC<Meals> = ({ title, slug, image, summary, creator }) => 
     <article className={classes.meal}>
       <header>
         <div className={classes.image}>
-          <Image src={image} alt={title} fill />
+          <Image src={`https://ik.imagekit.io/wt9s8djlb/${image}`} alt={title} fill />
         </div>
         <div className={classes.headerText}>
           <h2>{title}</h2>

@@ -12,12 +12,11 @@ const MealDetailsPage = ({ params }: { params: any }) => {
     notFound();
   }
   meal.instructions = meal.instructions.replace(/\n/g, "<br />");
-
   return (
     <>
       <header className={classes.header}>
         <div className={classes.image}>
-          <Image fill src={meal.image} alt={meal.title} />
+          <Image fill src={`https://ik.imagekit.io/wt9s8djlb/${meal.image}`} alt={meal.title} />
         </div>
         <div className={classes.headerText}>
           <h1>{meal.title}</h1>

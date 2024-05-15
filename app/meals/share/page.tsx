@@ -1,6 +1,8 @@
 import React from "react";
 import classes from "@/app/meals/share/page.module.css";
 import ImagePicker from "@/components/ImageUpload/ImagePicker";
+import { shareMeal } from "@/lib/serverActions";
+import MealsFormSubmit from "@/components/MealsComponent/MealsFormSubmit";
 const Share = () => {
   return (
     <>
@@ -11,7 +13,7 @@ const Share = () => {
         <p>Or any other meal you feel needs sharing!</p>
       </header>
       <main className={classes.main}>
-        <form className={classes.form}>
+        <form className={classes.form} action={shareMeal}>
           <div className={classes.row}>
             <p>
               <label htmlFor="name">Your name</label>
@@ -34,9 +36,9 @@ const Share = () => {
             <label htmlFor="instructions">Instructions</label>
             <textarea id="instructions" name="instructions" rows={10} required></textarea>
           </p>
-          <ImagePicker />
+          <ImagePicker label="Your image" name="image" />
           <p className={classes.actions}>
-            <button type="submit">Share Meal</button>
+            <MealsFormSubmit />
           </p>
         </form>
       </main>
